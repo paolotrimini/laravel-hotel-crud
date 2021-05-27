@@ -23,3 +23,11 @@ use Illuminate\Support\Facades\Route;
         -> name('create');
     Route::post('store/employee', 'TestController@store')
         -> name('store');
+
+    Route::get('edit/employee/{id}', 'TestController@edit')
+        -> name('edit');
+    Route::post('update/employee/{id}', 'TestController@update')
+        -> name('update');
+
+    Route::get('destroy/{id}', 'TestController@destroy')
+        -> name('destroy');
